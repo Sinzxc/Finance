@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/background_ripple">
+
+  <item android:id="@android:id/mask">
+    <shape>
+      <solid android:color="@color/background_card_item" />
+      <corners android:radius="@dimen/view_profile_card_item_background_corner_radius" />
+    </shape>
+  </item>
+
+</ripple>

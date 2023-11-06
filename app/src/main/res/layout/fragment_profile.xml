@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_container"
+    android:orientation="vertical"
+    >
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center_horizontal"
+      android:orientation="vertical"
+      android:paddingBottom="@dimen/fragment_profile_padding_bottom"
+      android:paddingHorizontal="@dimen/fragment_profile_padding_horizontal"
+      android:paddingTop="@dimen/fragment_profile_padding_top"
+      >
+
+    <ImageView
+        android:id="@+id/fragment_profile_icon_iv"
+        android:layout_width="@dimen/fragment_profile_main_icon_size"
+        android:layout_height="@dimen/fragment_profile_main_icon_size"
+        app:srcCompat="@drawable/ic_profile_main_icon"
+        />
+
+    <TextView
+        android:id="@+id/fragment_profile_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fragment_profile_item_spacing"
+        tools:text="NAME"
+        style="@style/Profile.Title"
+        />
+
+    <com.example.financemanager.profile.card.ProfileCardView
+        android:id="@+id/fragment_profile_achievements_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fragment_profile_item_spacing"
+        app:title="@string/fragment_profile_achievements_title"
+        />
+
+    <com.example.financemanager.profile.card.ProfileCardView
+        android:id="@+id/fragment_profile_documents_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fragment_profile_item_spacing"
+        app:title="@string/fragment_profile_documents_title"
+        />
+
+    <TextView
+        android:id="@+id/fragment_profile_add_document_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fragment_profile_item_spacing"
+        android:text="@string/fragment_profile_add_document_btn_text"
+        style="@style/Profile.AddDocumentButton"
+        />
+
+  </LinearLayout>
+
+</ScrollView>

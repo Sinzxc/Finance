@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Finance Manager</string>
+    <string-array name="sorti_Items">
+        <item>возрастание %</item>
+        <item>убывание %</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="test_array">
+        <item>test</item>
+        <item>test</item>
+        <item>test</item>
+        <item>test</item>
+        <item>test</item>
+        <item>test</item>
+        <item>test</item>
+        <item>test</item>
+        <item>test</item>
+        <item>test</item>
+    </string-array>
+    <string-array name="currency_array">
+        <item>EUR</item>
+        <item>RUB</item>
+        <item>USD</item>
+        <item>GBP</item>
+        <item>UAH</item>
+    </string-array>
+
+    <string-array name="category_intent">
+        <item>Зарплата</item>
+        <item>Подарок</item>
+        <item>Вклад в банке</item>
+    </string-array>
+    <string-array name="category_ouylay">
+        <item>Еда</item>
+        <item>Одежда</item>
+        <item>Транспорт</item>
+        <item>Налоги</item>
+    </string-array>
+
+
+    <!-- region Profile strings -->
+    <string name="fragment_profile_achievements_title">Достижения</string>
+    <string name="fragment_profile_documents_title">Мои документы</string>
+    <string name="fragment_profile_add_document_btn_text">Добавить документ</string>
+    <!-- endregion Profile strings -->
+</resources>

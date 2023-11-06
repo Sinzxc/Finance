@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/infCategory"
+    android:layout_width="320dp"
+    android:layout_height="50dp"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/category"
+    android:backgroundTint="?attr/colorOnSecondary"
+    android:visibility="visible"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <RelativeLayout
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/md_theme_dark_errorContainer">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/circle" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingLeft="80dp"
+        android:text="Разное"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingLeft="175dp"
+        android:text="35%"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingLeft="250dp"
+        android:text="3850₽"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_marginRight="510dp"/>
+</RelativeLayout>

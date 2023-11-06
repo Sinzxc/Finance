@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/activity_main_test_fragment_container"
+        android:name="com.example.financemanager.profile.fragment.ProfileFragment"
+        android:layout_width="match_parent"
+        android:layout_height="680dp">
+
+    </androidx.fragment.app.FragmentContainerView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:paddingTop="10dp">
+
+            <ImageButton
+                android:id="@+id/convector"
+                android:layout_width="100dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/lowerbtn"
+                android:onClick="converterClick"
+                android:src="@drawable/convector"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/main"
+                android:layout_width="100dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/lowerbtn"
+                android:onClick="mainClick"
+                android:src="@drawable/moneybroken"
+                app:layout_constraintStart_toEndOf="@id/convector"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/profile"
+                android:layout_width="100dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/main"
+                android:src="@drawable/profile"
+                app:layout_constraintStart_toEndOf="@id/main"
+                app:layout_constraintTop_toTopOf="parent"
+                android:tint="#FFFFFF"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="@drawable/bg_card"
+    tools:layout_height="wrap_content"
+    tools:layout_margin="16dp"
+    tools:layout_width="match_parent"
+    tools:orientation="vertical"
+    tools:paddingTop="@dimen/view_profile_card_padding"
+    tools:parentTag="android.widget.LinearLayout"
+    >
+
+  <TextView
+      android:id="@+id/profile_card_title_tv"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="@dimen/view_profile_card_title_margin_bottom"
+      android:layout_marginHorizontal="@dimen/view_profile_card_padding"
+      tools:text="Достижения"
+      style="@style/Profile.Card.Title"
+      />
+
+  <View
+      android:id="@+id/profile_card_divider"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/view_profile_card_divider_height"
+      android:background="@color/divider_card"
+      android:visibility="gone"
+      tools:visibility="visible"
+      />
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/profile_card_rv"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:clipToPadding="false"
+      android:orientation="horizontal"
+      android:overScrollMode="never"
+      android:paddingHorizontal="@dimen/view_profile_card_padding"
+      android:paddingVertical="@dimen/view_profile_card_items_padding_vertical"
+      android:visibility="gone"
+      app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+      tools:listitem="@layout/item_profile_card"
+      tools:visibility="visible"
+      />
+
+</merge>

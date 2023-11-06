@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>RICKOWENS</title>
+</head>
+<body>
+    <div class="main-block" id="mainb">
+        <div class="header-switch-wrap">
+            <header>
+                <div class="container">
+                    <div class="header-wrap">
+                        <ol class="header-links">
+                            <li><a href="#">Мой аккаунт</a></li>
+                            <li><a href="#">Понравившиеся</a></li>
+                            <li><a href="#">Корзина</a></li>
+                            <li><a href="#" id="header-link-last">Войти</a></li>
+                        </ol>
+                        <a href="#" class="header-btn">Отслеживание</a>
+                    </div>
+                </div>
+            </header>
+            <section class="search-section">
+                <div class="container">
+                    <div class="search-wrap">
+                        <div class="search-left">
+                            <h1>rickowens</h1>
+                            <div class="search">
+                                <input type="text" placeholder="Поиск..">
+                            </div>
+                        </div>
+                        <div class="cart">
+                            <p>Корзина - 1488 руб.</p>
+                            <img src="/img/cart.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <main>
+                <section class="nav-section">
+                    <div class="container">
+                        <div class="nav-wrap">
+                            <ol>
+                                <li><a class="nav-link" href="#">Home</a></li>
+                                <li><a class="nav-link" href="#">shoes</a></li>
+                                <li><a class="nav-link" href="#">nEW COLLECTION</a></li>
+                                <li><a class="nav-link" href="#">mAN</a></li>
+                                <li><a class="nav-link" href="#">wOMAN</a></li>
+                                <li><a class="nav-link" href="#" id="sale-link">saLE</a></li>
+                            </ol>
+                            <a class="category-burger" href="#" id="burger-open" onclick="bOpen()"><img src="/img/burger.svg" alt=""></a>
+                        </div>
+                    </div>
+                </section>
+        </div>
+            <section class="slider-section">
+                <div class="container">
+                    <div class="slider" id="slider">
+                        
+                    </div>
+                    <div class="slider-btns">
+                        <div class="slider-select" id="slider-btn1" onclick="slider1()"></div>
+                        <div class="slider-btn" id="slider-btn2" onclick="slider2()"></div>
+                        <div class="slider-btn" id="slider-btn3" onclick="slider3()"></div>
+                    </div>
+                </div>  
+            </section>
+            <section class="title-section">
+                <div class="container">
+                    <h2 class="section-title">Featured Products</h2>
+                </div>
+            </section>
+            <section class="products-section">
+               <div class="container">
+                    <div class="products">
+                        <div class="product">
+                            <img src="/img/product.png" alt="">
+                            <hr>
+                            <p class="product-name">Название</p>
+                            <div class="stars">
+                                <p>Отзыв</p>
+                                <div class="stars-wrap">
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                </div>
+                            </div>
+                            <p class="product-price">Цена</p>
+                            <a href="#">В корзину</a>
+                        </div>
+                        <div class="product">
+                            <img src="/img/product.png" alt="">
+                            <hr>
+                            <p class="product-name">Название</p>
+                            <div class="stars">
+                                <p>Отзыв</p>
+                                <div class="stars-wrap">
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                </div>
+                            </div>
+                            <p class="product-price">Цена</p>
+                            <a href="#">В корзину</a>
+                        </div>
+                        <div class="product">
+                            <img src="/img/product.png" alt="">
+                            <hr>
+                            <p class="product-name">Название</p>
+                            <div class="stars">
+                                <p>Отзыв</p>
+                                <div class="stars-wrap">
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                </div>
+                            </div>
+                            <p class="product-price">Цена</p>
+                            <a href="#">В корзину</a>
+                        </div>
+                        <div class="product">
+                            <img src="/img/product.png" alt="">
+                            <hr>
+                            <p class="product-name">Название</p>
+                            <div class="stars">
+                                <p>Отзыв</p>
+                                <div class="stars-wrap">
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                </div>
+                            </div>
+                            <p class="product-price">Цена</p>
+                            <a href="#">В корзину</a>
+                        </div>
+                        <div class="product">
+                            <img src="/img/product.png" alt="">
+                            <hr>
+                            <p class="product-name">Название</p>
+                            <div class="stars">
+                                <p>Отзыв</p>
+                                <div class="stars-wrap">
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                </div>
+                            </div>
+                            <p class="product-price">Цена</p>
+                            <a href="#">В корзину</a>
+                        </div>
+                        <div class="product">
+                            <img src="/img/product.png" alt="">
+                            <hr>
+                            <p class="product-name">Название</p>
+                            <div class="stars">
+                                <p>Отзыв</p>
+                                <div class="stars-wrap">
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                </div>
+                            </div>
+                            <p class="product-price">Цена</p>
+                            <a href="#">В корзину</a>
+                        </div>
+                        <div class="product">
+                            <img src="/img/product.png" alt="">
+                            <hr>
+                            <p class="product-name">Название</p>
+                            <div class="stars">
+                                <p>Отзыв</p>
+                                <div class="stars-wrap">
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                </div>
+                            </div>
+                            <p class="product-price">Цена</p>
+                            <a href="#">В корзину</a>
+                        </div>
+                        <div class="product">
+                            <img src="/img/product.png" alt="">
+                            <hr>
+                            <p class="product-name">Название</p>
+                            <div class="stars">
+                                <p>Отзыв</p>
+                                <div class="stars-wrap">
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                </div>
+                            </div>
+                            <p class="product-price">Цена</p>
+                            <a href="#">В корзину</a>
+                        </div>
+                    </div>
+               </div>
+            </section>
+        </main>
+        <footer>
+            <div class="container">
+                <div class="footer-wrap">
+                    <div class="footer-left">
+                        <h2>rickowens</h2>
+                        <p>Описание:</p>
+                        <div class="social">
+                            <p>Соц сети:</p>
+                            <div class="social-links">
+                                <a href="#" class="social-link social-link1"></a>
+                                <a href="#" class="social-link social-link2"></a>
+                                <a href="#" class="social-link social-link3"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-line"></div>
+                    <div class="footer-right">
+                        <h2>Информация</h2>
+                        <div class="footer-right-wrap">
+                            <p>Город: Westland</p>
+                            <p>Тех поддержка:<br>8-800-555-35-35</p>
+                            <p>www.rickowens.ru</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="burger" id="burger" onclick="bClose()">
+        <a class="category-burger-close" href="#"><img src="/img/burger.svg" alt=""></a>
+        <h2>Основное</h2>
+        <div class="burger-btn-wrap">
+            <a href="#" class="burger-btn">Мой аккаунт</a>
+            <a href="#" class="burger-btn">Понравившиеся</a>
+            <a href="#" class="burger-btn">Корзина</a>
+            <a href="#" class="burger-btn">Войти</a>
+            <a href="#" class="burger-btn burger-btn-last">Отслеживание</a>
+        </div>
+        <h2>Категории</h2>
+        <div class="burger-btn-wrap burger-btn-wrap2">
+            <a href="#" class="burger-btn">Home</a>
+            <a href="#" class="burger-btn">shoes</a>
+            <a href="#" class="burger-btn">nEW COLLECTION</a>
+            <a href="#" class="burger-btn">mAN</a>
+            <a href="#" class="burger-btn">wOMAN</a>
+            <a href="#" class="burger-btn burger-btn-last">saLE</a>
+        </div>
+    </div>
+</body>
+<script src="/script/slider.js"></script>
+<script src="/script/burger.js"></script>
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <item>
+    <shape android:shape="oval">
+      <solid android:color="@color/background_accent" />
+    </shape>
+
+  </item>
+
+  <item
+      android:bottom="-3.5dp"
+      android:drawable="@drawable/ic_profile_circle"
+      android:left="-3.5dp"
+      android:right="-3.5dp"
+      android:top="-3.5dp" />
+
+</layer-list>

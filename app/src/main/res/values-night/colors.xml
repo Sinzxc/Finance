@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <color name="background_accent">@color/carribean_green</color>
+  <color name="background_container">@color/black_pearl</color>
+  <color name="background_card">@color/cyprus</color>
+  <color name="background_card_item">@color/venice_blue</color>
+  <color name="background_ripple">@color/white_30</color>
+  <color name="divider_card">@color/orient</color>
+  <color name="text_primary">@color/white</color>
+  <color name="text_accent">@color/carribean_green</color>
+
+</resources>

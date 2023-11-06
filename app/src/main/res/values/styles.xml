@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+  <style name="Text">
+    <item name="android:textColor">@color/text_primary</item>
+  </style>
+
+  <style name="Profile.Title" parent="Text">
+    <item name="android:fontFamily">@font/inter_bold</item>
+    <item name="android:textSize">@dimen/fragment_profile_title_text_size</item>
+    <item name="android:lineHeight" tools:targetApi="p">@dimen/fragment_profile_title_line_height</item>
+    <item name="lineHeight">@dimen/fragment_profile_title_line_height</item>
+  </style>
+
+  <style name="Profile.Card.Title" parent="Text">
+    <item name="android:fontFamily">@font/inter_semibold</item>
+    <item name="android:textSize">@dimen/view_profile_card_title_text_size</item>
+    <item name="android:lineHeight" tools:targetApi="p">@dimen/view_profile_card_title_line_height</item>
+    <item name="lineHeight">@dimen/view_profile_card_title_line_height</item>
+  </style>
+
+  <style name="Profile.AddDocumentButton" parent="Text">
+    <item name="android:fontFamily">@font/inter_light</item>
+    <item name="android:textSize">@dimen/fragment_profile_add_document_btn_text_size</item>
+    <item name="android:lineHeight" tools:targetApi="p">@dimen/fragment_profile_add_document_btn_line_height</item>
+    <item name="lineHeight">@dimen/fragment_profile_add_document_btn_line_height</item>
+    <item name="android:textColor">@color/text_accent</item>
+    <item name="android:background">@drawable/bg_card</item>
+    <item name="android:padding">@dimen/fragment_profile_add_document_btn_padding</item>
+    <item name="android:gravity">center</item>
+  </style>
+
+</resources>

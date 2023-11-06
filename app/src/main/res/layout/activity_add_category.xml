@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addCategiry">
+
+    <RelativeLayout
+        android:layout_width="316dp"
+        android:layout_height="59dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/header_categore"
+        android:layout_marginTop="45dp"/>
+
+    <RelativeLayout
+        android:layout_width="316dp"
+        android:layout_height="775dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="@color/bgcategory">
+        <Button
+            android:id="@+id/tet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:text="Добавить"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:background="@color/transperent"/>
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="107px"
+            android:layout_marginTop="160dp"
+            android:background="@drawable/ovalelemets"
+            android:onClick="Ok_button"
+            android:src="@drawable/add_ok" />
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="160dp"
+            android:layout_marginLeft="200dp"
+            android:background="@drawable/ovalelemets"
+            android:src="@drawable/add_bin"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Категория"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="300dp"/>
+
+        <Spinner
+            android:id="@+id/spinner_cat"
+            android:layout_width="254dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="350dp"
+            android:entries="@array/category_intent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сумма"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="400dp"/>
+
+        <EditText
+            android:id="@+id/price"
+            android:layout_width="254dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="450dp"
+            android:ems="10"
+            android:inputType="numberDecimal"/>
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="59dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ovalelemets"
+        android:src="@drawable/add_plus"/>
+
+
+</RelativeLayout>

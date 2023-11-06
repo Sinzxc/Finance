@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".convector">
+
+    <RelativeLayout
+        android:layout_width="316dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/conv">
+
+        <Spinner
+            android:id="@+id/currency"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:entries="@array/currency_array"
+            android:layout_marginStart="20dp"/>
+
+        <TextView
+            android:id="@+id/input_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="35dp"
+            android:maxLength="7"
+            android:text="0"
+            android:textSize="25dp" />
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:onClick="convertClick"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="125dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/change"
+        android:src="@drawable/currency"/>
+
+    <RelativeLayout
+        android:layout_width="316dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="195dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/conv">
+
+        <Spinner
+            android:id="@+id/currency2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:entries="@array/currency_array" />
+
+        <TextView
+            android:id="@+id/output_text"
+            android:layout_width="wrap_content"
+            android:layout_height="31dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="37dp"
+            android:text="0"
+            android:textSize="25dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="268dp"
+        android:layout_height="320dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="315dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/conv">
+
+        <Button
+            android:id="@+id/btn6"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="80dp"
+            android:layout_toRightOf="@+id/btn5"
+            android:background="@drawable/numbtn"
+            android:onClick="btn00"
+            android:text="6"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:background="@drawable/numbtn"
+            android:onClick="btn00"
+            android:text="1"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/btn2"
+            android:background="@drawable/numbtn"
+            android:onClick="btn00"
+            android:text="3"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/btn1"
+            android:background="@drawable/numbtn"
+            android:onClick="btn00"
+            android:text="2"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/btn5"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="80dp"
+            android:layout_toRightOf="@+id/btn4"
+            android:background="@drawable/numbtn"
+            android:onClick="btn00"
+            android:text="5"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/btn4"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/numbtn"
+            android:onClick="btn00"
+            android:text="4"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/btn8"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="160dp"
+            android:layout_toRightOf="@+id/btn7"
+            android:background="@drawable/numbtn"
+            android:onClick="btn00"
+            android:text="8"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/btn9"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="160dp"
+            android:layout_toRightOf="@+id/btn8"
+            android:background="@drawable/numbtn"
+            android:onClick="btn00"
+            android:text="9"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/btn7"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="160dp"
+            android:background="@drawable/numbtn"
+            android:onClick="btn00"
+            android:text="7"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="240dp"
+            android:background="@drawable/numbtn"
+            android:onClick="btn00"
+            android:text="C"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/btn0"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="240dp"
+            android:layout_toRightOf="@+id/btnClear"
+            android:background="@drawable/numbtn"
+            android:onClick="btn00"
+            android:text="0"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/btnz"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="240dp"
+            android:layout_toRightOf="@+id/btn0"
+            android:background="@drawable/numbtn"
+            android:onClick="btn00"
+            android:text=","
+            android:textSize="25dp" />
+
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:paddingTop="10dp">
+
+
+        <ImageButton
+            android:id="@+id/convector"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:background="@drawable/main"
+            android:src="@drawable/convector"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#FFFFFF" />
+
+        <ImageButton
+            android:id="@+id/main"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/lowerbtn"
+            android:onClick="mainClick"
+            android:src="@drawable/moneybroken"
+            app:layout_constraintStart_toEndOf="@id/convector"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/profile"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/lowerbtn"
+            android:src="@drawable/profile"
+            android:onClick="profileClick"
+            app:layout_constraintStart_toEndOf="@id/main"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

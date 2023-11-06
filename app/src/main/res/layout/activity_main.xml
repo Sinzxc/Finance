@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/mainCat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <ScrollView
+            android:layout_width="320dp"
+            android:layout_height="250dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="435dp"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:id="@+id/infCategories"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content">
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/upperBalance"
+            android:layout_width="320dp"
+            android:layout_height="115dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_background">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="106dp"
+                android:layout_marginTop="18dp"
+                android:text="Итого:"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/Balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="22 000"
+                android:textColor="@color/white"
+                android:textSize="35dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/Balance"
+                android:text="₽"
+                android:textColor="@color/white"
+                android:textSize="35dp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/Balance"
+                android:layout_centerInParent="true"
+                android:background="@color/white" />
+
+            <Button
+                android:id="@+id/outlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="75dp"
+                android:background="@color/transperent"
+                android:onClick="setOutlay"
+                android:text="Расходы"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="190dp"
+                android:layout_marginTop="75dp"
+                android:background="@color/transperent"
+                android:onClick="setIncome"
+                android:text="Доходы"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="320dp"
+            android:layout_height="55dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="135dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/time_block"
+            tools:context=".PieChartActivity">
+
+            <Space
+                android:id="@+id/space1"
+                android:layout_width="8dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+
+            <Button
+                android:id="@+id/weeks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-6dp"
+                android:layout_marginEnd="-8dp"
+                android:layout_toStartOf="@id/space2"
+                android:background="@color/transperent"
+                android:onClick="WeekClick"
+                android:text="Неделя" />
+
+            <Space
+                android:id="@+id/space2"
+                android:layout_width="8dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+
+            <Button
+                android:id="@+id/month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-6dp"
+                android:layout_marginEnd="-81dp"
+                android:layout_toStartOf="@id/space3"
+                android:background="@color/transperent"
+                android:onClick="MonthClick"
+                android:text="Месяц" />
+
+            <Space
+                android:id="@+id/space3"
+                android:layout_width="8dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+
+            <Button
+                android:id="@+id/year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-6dp"
+                android:layout_marginEnd="-152dp"
+                android:layout_toStartOf="@id/space4"
+                android:background="@color/transperent"
+                android:onClick="YearClick"
+                android:text="Год" />
+
+            <Space
+                android:id="@+id/space4"
+                android:layout_width="10dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+
+            <Button
+                android:id="@+id/day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-6dp"
+                android:background="@color/transperent"
+                android:onClick="DayClick"
+                android:text="День" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="320dp"
+            android:layout_height="235dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="167dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/diagram_block"
+            tools:context=".PieChartActivity">
+
+            <ImageButton
+                android:id="@+id/btnDateAgo"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="-20dp"
+                android:background="@color/transperent"
+                android:onClick="btnDateAgo"
+                android:src="@drawable/arrow"
+                android:textSize="20dp"
+                app:tint="?attr/colorOnPrimary" />
+
+            <RelativeLayout
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="100dp"
+                android:weightSum="2">
+
+                <org.eazegraph.lib.charts.PieChart
+                    android:id="@+id/piechart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_weight="1"
+
+                    />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/diagram_cirle">
+
+                    <RelativeLayout
+                        android:id="@+id/diagram_balance_wrap"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/DiagramOutlay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="11 000"
+                            android:textColor="@color/white"
+                            android:textSize="20dp" />
+
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/btnDateForward"
+                android:layout_width="48dp"
+                android:layout_height="41dp"
+                android:layout_marginLeft="290dp"
+                android:background="@color/transperent"
+                android:onClick="btnDateForward"
+                android:scaleX="-1"
+                android:src="@drawable/arrow"
+                android:textSize="20dp"
+                app:tint="?attr/colorOnPrimary" />
+
+            <TextView
+                android:id="@+id/txtCalendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="7 октября"
+                android:textSize="17dp" />
+
+            <ImageButton
+                android:id="@+id/dateTime"
+                android:layout_width="61dp"
+                android:layout_height="61dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="155dp"
+                android:background="@drawable/btncircle"
+                android:onClick="clickL"
+                android:src="@drawable/datetime" />
+
+            <ImageButton
+                android:id="@+id/plus"
+                android:layout_width="61dp"
+                android:layout_height="61dp"
+                android:layout_marginLeft="250dp"
+                android:layout_marginTop="155dp"
+                android:background="@drawable/btnplus"
+                android:onClick="clickR"
+                android:src="@drawable/plus" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="320dp"
+            android:layout_height="24dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="405dp">
+
+            <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="24dp"
+
+                android:background="@drawable/sorting">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="Сортировать по:" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="110dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/pansorting">
+
+
+                <Spinner
+                    android:id="@+id/spnCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/sorti_Items" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:paddingTop="10dp">
+
+
+            <ImageButton
+                android:id="@+id/convector"
+                android:layout_width="100dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/lowerbtn"
+                android:onClick="converterClick"
+                android:src="@drawable/convector"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/main"
+                android:layout_width="100dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/main"
+                android:src="@drawable/moneybroken"
+                android:tint="#FFFFFF"
+                app:layout_constraintStart_toEndOf="@id/convector"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/profile"
+                android:layout_width="100dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/lowerbtn"
+                android:src="@drawable/profile"
+                android:onClick="profileClick"
+                app:layout_constraintStart_toEndOf="@id/main"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/addCatIncome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="316dp"
+            android:layout_height="59dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/header_categore" />
+
+        <RelativeLayout
+            android:layout_width="316dp"
+            android:layout_height="775dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:background="@color/bgcategory">
+
+            <Button
+                android:id="@+id/tet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp"
+                android:background="@color/transperent"
+                android:text="Добавить"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="107px"
+                android:layout_marginTop="160dp"
+                android:background="@drawable/ovalelemets"
+                android:onClick="Ok_button"
+                android:src="@drawable/add_ok" />
+
+            <ImageButton
+                android:onClick="deleteBtn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="160dp"
+                android:background="@drawable/ovalelemets"
+                android:src="@drawable/add_bin" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="300dp"
+                android:text="Категория"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+            <Spinner
+                android:id="@+id/spinner_cat"
+                android:layout_width="254dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="350dp"
+                android:entries="@array/category_intent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="400dp"
+                android:text="Сумма"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/price"
+                android:layout_width="254dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="450dp"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+
+        </RelativeLayout>
+
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="59dp"
+            android:background="@drawable/ovalelemets"
+            android:src="@drawable/add_plus" />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/addCatOutlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="316dp"
+            android:layout_height="59dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/header_categore" />
+
+        <RelativeLayout
+            android:layout_width="316dp"
+            android:layout_height="775dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:background="@color/bgcategory">
+
+            <Button
+                android:id="@+id/tet2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp"
+                android:background="@color/transperent"
+                android:text="Добавить"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="107px"
+                android:layout_marginTop="160dp"
+                android:background="@drawable/ovalelemets"
+                android:onClick="Ok_button1"
+                android:src="@drawable/add_ok" />
+
+            <ImageButton
+                android:onClick="deleteBtn2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="160dp"
+                android:background="@drawable/ovalelemets"
+                android:src="@drawable/add_bin" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="300dp"
+                android:text="Категория"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+            <Spinner
+                android:id="@+id/spinner_cat2"
+                android:layout_width="254dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="350dp"
+                android:entries="@array/category_ouylay" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="400dp"
+                android:text="Сумма"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/price2"
+                android:layout_width="254dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="450dp"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+
+        </RelativeLayout>
+
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="59dp"
+            android:background="@drawable/ovalelemets"
+            android:src="@drawable/add_plus" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
