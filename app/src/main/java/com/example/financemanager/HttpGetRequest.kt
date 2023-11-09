@@ -6,7 +6,7 @@ import java.io.InputStreamReader
 import java.net.HttpURLConnection
 import java.net.URL
 
-class HttpGetRequest : AsyncTask<String, Void, String>() {
+class HttpGetRequest : AsyncTask<String, Void, String>() {//Файл для отправки GET запроса для конвертации валюты
 
   override fun doInBackground(vararg urls: String): String {
     val url = URL(urls[0])

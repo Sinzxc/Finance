@@ -1,5 +1,5 @@
 package com.example.financemanager
-class Category {
+class Category {//Класс для хранения данных о каждой категории
     var  name:String?=null;
     var  value:Float?=null;
     var  color:String?=null;

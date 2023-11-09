@@ -13,14 +13,16 @@ import java.util.Calendar
 import java.util.Locale
 
 
-class Diagramm {
+class Diagramm {//Основной класс диаграммы и её хранилища
+    //Сама диаграмма
     var pieChart: PieChart? = null
-    var cat_names = mutableListOf<String>("Еда", "Одежда", "Транспорт", "Налоги", "Прочее");
+    //Набор категорий дохода
     var incomeCategories = mutableListOf<Category>(
         Category("Зарплата", 0f, "#FFA726", 3850f, "2024-11-12"),
         Category("Поадрки", 0f, "#66BB6A", 30f, "2023-11-1"),
         Category("Вклад", 0f, "#EF5350", 300f, "2023-11-5"),
     )
+    //Набор категорий расходов
     var outlayCategories = mutableListOf<Category>(
         Category("Еда", 0f, "#FFA726", 200f, "2023-11-1"),
         Category("Одежда", 0f, "#66BB6A", 30f, "2023-11-2"),
@@ -28,7 +30,7 @@ class Diagramm {
         Category("Налоги", 0f, "#29B6F6", 380f, "2023-11-1"),
     )
 
-    lateinit var layoutContainer: RelativeLayout
+    //Набор текущих категорий
     lateinit var currentCat:List<Category>
 
     constructor(_pie: PieChart?) {
@@ -37,7 +39,7 @@ class Diagramm {
 
     }
 
-    fun Draw(currentList: List<Category>?) {
+    fun Draw(currentList: List<Category>?) {//Функция отрисовки по переданным категориям
         pieChart?.clearChart();
         for (i in currentCat as List<Category>) {
             pieChart!!.addPieSlice(
@@ -51,7 +53,7 @@ class Diagramm {
         pieChart!!.startAnimation()
     }
 
-    fun DrawIncome() {
+    fun DrawIncome() {//Функция отрисовки по текущим доходам
         pieChart?.clearChart();
         for (i in incomeCategories) {
             pieChart!!.addPieSlice(
@@ -65,7 +67,7 @@ class Diagramm {
         pieChart!!.startAnimation()
     }
 
-    fun DrawOutlay() {
+    fun DrawOutlay() {//Функция отрисовки по текущим расходам
         pieChart?.clearChart();
         for (i in outlayCategories) {
             pieChart!!.addPieSlice(
@@ -80,28 +82,26 @@ class Diagramm {
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
-    fun catAdd(_name: String, _value: Float, _color: String, _price: Float,calendar: Calendar){
+    fun catAdd(_name: String, _value: Float, _color: String, _price: Float,calendar: Calendar){ //Функция добавления новой категории дохода
         currentCat=incomeCategories;
         incomeCategories += Category(
             _name, _value, _color, _price, ((calendar.time.year-100)+2000).toString()+"-"+(calendar.time.month+1).toString()+"-"+calendar.time.date.toString()
         )
-        cat_names += _name;
         Draw(currentCat)
 
     }
     @RequiresApi(Build.VERSION_CODES.O)
-    fun catAdd2(_name: String, _value: Float, _color: String, _price: Float,calendar: Calendar){
+    fun catAdd2(_name: String, _value: Float, _color: String, _price: Float,calendar: Calendar){//Функция добавления новой категории расхода
         currentCat=outlayCategories;
        outlayCategories += Category(
             _name, _value, _color, _price, ((calendar.time.year-100)+2000).toString()+"-"+(calendar.time.month+1).toString()+"-"+calendar.time.date.toString()
         )
-        cat_names += _name;
         Draw(currentCat)
 
     }
 
 
-    fun getOnDay(calendar: Calendar, boolean: Boolean): List<Category> {
+    fun getOnDay(calendar: Calendar, boolean: Boolean): List<Category> {//Функция поления набора категорий по переданному дню
         val formatter = SimpleDateFormat("yyyy-MM-dd", Locale("ru"))
         var temp = listOf<Category>()
         if (boolean) {
@@ -134,7 +134,7 @@ class Diagramm {
         return temp;
     }
 
-    fun getOnWeek(Caalendar: Calendar, boolean: Boolean):List<Category>{
+    fun getOnWeek(Caalendar: Calendar, boolean: Boolean):List<Category>{//Функция поления набора категорий по переданной неделе
         val formatter = SimpleDateFormat("yyyy-MM-dd", Locale("ru"))
         var temp = listOf<Category>()
         var tempCaledar=Caalendar
@@ -179,7 +179,7 @@ class Diagramm {
         tempCaledar.add(Calendar.DAY_OF_YEAR,-4)
         return temp
     }
-    fun getOnMonth(calendar: Calendar, boolean: Boolean):List<Category>{
+    fun getOnMonth(calendar: Calendar, boolean: Boolean):List<Category>{ //Функция поления набора категорий по переданному месяцу
         val formatter = SimpleDateFormat("yyyy-MM-dd", Locale("ru"))
         var temp = listOf<Category>()
         var tempCaledar=calendar;
@@ -219,7 +219,7 @@ class Diagramm {
         return temp
     }
 
-    fun getOnYear(calendar: Calendar, boolean: Boolean):List<Category>{
+    fun getOnYear(calendar: Calendar, boolean: Boolean):List<Category>{ //Функция поления набора категорий по переданному году
         val formatter = SimpleDateFormat("yyyy-MM-dd", Locale("ru"))
         var temp = listOf<Category>()
         var tempCaledar=calendar;
@@ -259,14 +259,14 @@ class Diagramm {
         return temp
     }
 
-    fun catSortDown(income: Boolean, item: List<Category>) {
+    fun catSortDown(income: Boolean, item: List<Category>) { //Функция сортировки переданных категорий по возрастанию процента
         currentCat=item.sortedBy { it.value }.reversed();
     }
 
-    fun catSortUp(income: Boolean, item: List<Category>) {
+    fun catSortUp(income: Boolean, item: List<Category>) {//Функция сортировки переданных категорий по убыванию процента
         currentCat=item.sortedBy { it.value };
     }
-    fun getCatValue(item: List<Category>?, balance: Balance):List<Category>{
+    fun getCatValue(item: List<Category>?, balance: Balance):List<Category>{//Функция для получения процентов текущих категорий по отношению к балансу
         var temp= listOf<Category>();
         for (i in item?.iterator()!!)
         {
@@ -277,22 +277,5 @@ class Diagramm {
         return item
     }
 
-//    temp[i].value= ((item[i].price!!*100)?.div(balance.currentBalance!!))?.toBigDecimal()?.setScale(1,RoundingMode.UP)?.toFloat();
-    fun List<Any>.swap(index1: Int, index2: Int,boolean: Boolean,item:List<Category>) {
-        var color=item[index1].color
-        var price=item[index1].price;
-        var date =item[index1].date;
-        var value=item[index1].value;
-        item[index1].date =item[index2].date
-        item[index1].value=item[index2].value;
-        item[index1].color=item[index2].color;
-        item[index1].price=item[index2].price;
-
-        item[index2].value = value
-        item[index2].color = color
-        item[index2].price = price
-        item[index2].date =  date
-
-    }
 
 }

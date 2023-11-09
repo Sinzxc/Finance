@@ -1,6 +1,7 @@
 package com.example.financemanager
 
-class Balance {
+class Balance {//Класс для хранения работы с балансом
+    //Объявление полей
     var balance:Float?=null;
     var incomeBalance:Float?=null;
     var expensesBalance:Float?=null;
@@ -10,7 +11,7 @@ class Balance {
         balanceUpdate(income)
     }
 
-    fun balanceUpdate(income:Diagramm){
+    fun balanceUpdate(income:Diagramm){//Функция для обновления основного баланса, баланса доходов и расходов
         var sum=0.0f;
         for (i in income.incomeCategories)
         {
@@ -26,7 +27,7 @@ class Balance {
         balance=incomeBalance as Float- expensesBalance as Float
         currentBalance=sum;
     }
-    fun getBalance(current: List<Category>){
+    fun getBalance(current: List<Category>){//Функция для получения баланса по по задданным категориям
         var sum=0.0f;
         for (i in current)
         {

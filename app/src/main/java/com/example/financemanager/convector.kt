@@ -22,12 +22,14 @@ import kotlin.math.roundToInt
 
 
 class convector : AppCompatActivity() {
+    //Переменны для хранения валют
     var baseCurrency:String="EUR";
     var secondCurrency:String="RUB";
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_convector)
 
+        //Обработчики выбора валют
         val currency=findViewById<Spinner>(R.id.currency);
         currency.setSelection(0);
         currency?.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
@@ -65,10 +67,10 @@ class convector : AppCompatActivity() {
         }
 
     }
-    fun convertClick(view: View) {
+    fun convertClick(view: View) {//Нажатие на кнопку конвертировать
         request()
     }
-    fun btn00(view: View)
+    fun btn00(view: View)//Клавиатура
     {
         val btn = view as Button
         var text:TextView = findViewById(R.id.input_text)
@@ -91,7 +93,7 @@ class convector : AppCompatActivity() {
             }
         }
     }
-    fun out(string: String){
+    fun out(string: String){//Функция добавления числа в строку ввода
         var text:TextView = findViewById(R.id.input_text)
         if(text.text.toString()!="0")
             text.append(string)
@@ -99,22 +101,27 @@ class convector : AppCompatActivity() {
             text.text=string;
 
     }
-    fun request(){
+    fun request(){//Функция для отправки GET запроса и обработки ответа
+        //Получение элементов ввода и вывода
         val output = findViewById<TextView>(R.id.output_text)
         val input = findViewById<TextView>(R.id.input_text)
+        //Объект запроса
         var g=HttpGetRequest();
+        //Ссылка, в которую вставляются API-KEY и выбранные валюты
         val url = "https://api.currencyapi.com/v3/latest?apikey=cur_live_Oz7Mt6iPIXgdu57PdeXF2EiRJRJVZ44AhBOwxzPK&currencies=${secondCurrency}&base_currency=${baseCurrency}"
+        //Получение результата
         val result = HttpGetRequest().execute(url).get()
+        //Обработка ответа и вывод в поле
         var requestSplit=result.split(':');
         var requestComplete=requestSplit[8].replace('}',' ');
         var Currency=requestComplete.toFloat();
         output.text=(String.format("%.1f",(Currency*input.text.toString().replace(',','.').toFloat())).toString());
     }
-    fun mainClick(view: View){
+    fun mainClick(view: View){//Переход на главную страницу
         finish()
 
     }
-    fun profileClick(view:View){
+    fun profileClick(view:View){//Переход в профиль
         finish()
         var intent: Intent = Intent(this@convector,ProfileActivity::class.java)
         startActivity(intent);
